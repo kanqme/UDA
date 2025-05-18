@@ -1,0 +1,186 @@
+/* sitografia.css */
+
+/* Reset e base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fb;
+    color: #222;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+h1 {
+    text-align: center;
+    color: #0073b1; /* blu elegante */
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    background-color: #ffffff;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+ul li:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+ul li a {
+    display: block;
+    padding: 14px 20px;
+    color: #0073b1;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+ul li a:hover,
+ul li a:focus {
+    background-color: #0073b1;
+    color: white;
+    outline: none;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to right, #1e3a8a, #3b82f6); /* Sfumatura blu */
+  color: white;
+  padding: 30px 0 20px;
+  border-radius: 20px 20px 0 0;
+  margin-top: 40px; /* Added to ensure spacing from content */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.footer-section {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  color: white;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #dbeafe; /* Azzurro chiaro */
+  padding-bottom: 5px;
+}
+
+.footer-section ul {
+  list-style: none;
+  background: none; /* Remove background from footer list items */
+  box-shadow: none; /* Remove shadow from footer list items */
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+  background: none; /* Override the main list item style */
+  box-shadow: none; /* Override the main list item style */
+}
+
+.footer-section ul li a {
+  color: #dbeafe; /* Azzurro chiaro */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 0; /* Remove padding from footer links */
+  display: inline; /* Make links inline instead of block */
+}
+
+.footer-section ul li a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  background-color: transparent; /* Override the main a:hover style */
+}
+
+.footer-section p {
+  color: #dbeafe;
+  margin-bottom: 5px;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #dbeafe; /* Azzurro chiaro */
+}
+
+/* Responsive adjustments for footer */
+@media (max-width: 900px) {
+  .footer-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    main {
+        padding: 0 10px;
+    }
+}
+
+/* Call to Action Button */
+.call-to-action {
+    text-align: center;
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(to right, #1e3a8a, #3b82f6); /* Sfumatura blu come il footer */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(30, 58, 138, 0.3);
+    border: none;
+    outline: 3px solid #1e3a8a; /* Contorno blu come altri elementi */
+    outline-offset: 2px;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(30, 58, 138, 0.4);
+    color: white; /* Mantiene il testo bianco anche in hover */
+    text-decoration: none; /* Rimuove la sottolineatura in hover */
+}
+
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(30, 58, 138, 0.4);
+}

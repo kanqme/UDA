@@ -1,0 +1,479 @@
+/* Reset di base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Stili generali */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 15px;
+  color: white;
+}
+
+a {
+  color: #1565c0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0d47a1;
+  text-decoration: underline;
+}
+
+section {
+  padding: 40px 0;
+}
+
+.section-light {
+  background-color: #fff;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.section-light h1, .section-light h2, .section-light h3, .section-light h4 {
+  color: #1e3a8a;
+}
+
+.section-dark {
+  background-color: #dbeafe;
+  border-bottom: 1px solid #93c5fd;
+}
+
+.section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4 {
+  color: #1e3a8a;
+}
+
+/* Header e Navigazione */
+header {
+  background: linear-gradient(to right, #1e3a8a, #3b82f6);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border-radius: 0 0 20px 20px;
+  position: relative;
+}
+
+header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin: 0;
+  letter-spacing: 1px;
+  animation: fadeIn 2s ease;
+  color: white;
+}
+
+header h2 {
+  font-size: 1.2rem;
+  color: #dbeafe;
+  margin-top: 10px;
+  padding-left: 15px;
+  display: inline;
+  animation: slideIn 2s ease;
+}
+
+nav {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+nav ul li {
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li:hover {
+  background-color: #ffe4c4;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+nav a {
+  color: #1e3a8a;
+  font-weight: bold;
+  padding: 8px 15px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration: none;
+}
+
+/* Animazioni */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Box foto profilo */
+.foto-profilo {
+  width: 200px;
+  height: 200px;
+  background-color: #dbeafe;
+  border-radius: 10px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1e3a8a;
+  font-weight: bold;
+}
+
+.foto-profilo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Profilo individuale */
+#profili .caso {
+  text-align: center;
+  padding: 30px;
+}
+
+#profili .caso h3 {
+  color: white;
+  border-bottom: 2px solid #dbeafe;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+#profili .caso p {
+  margin-bottom: 15px;
+}
+
+#profili .caso button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #1e3a8a;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: block;
+  margin: 20px auto 0;
+  outline: 3px solid #1e3a8a;
+}
+
+#profili .caso button:hover {
+  background-color: #1e3a8a;
+  color: white;
+}
+
+/* Progetto */
+#progetto {
+  text-align: center;
+  padding: 40px 0;
+}
+
+#progetto p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+.progetto h3 {
+  color: white;
+  border-bottom: 2px solid #dbeafe;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.progetto button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #1e3a8a;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  outline: 3px solid #1e3a8a;
+}
+
+.progetto button:hover {
+  background-color: #1e3a8a;
+  color: white;
+}
+
+/* Azioni e rischi */
+.azioni-grid,
+.rischi-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.azione-card,
+.rischio-card {
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 300px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.azione-card:hover,
+.rischio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.azione-card h3,
+.rischio-card h3 {
+  background: linear-gradient(to right, #1e3a8a, #3b82f6);
+  color: white;
+  padding: 15px;
+  margin: 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.azione-contenuto,
+.rischio-contenuto {
+  display: flex;
+  padding: 20px;
+}
+
+.azione-icon,
+.rischio-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #dbeafe;
+  color: #1e3a8a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.azione-info,
+.rischio-info {
+  flex-grow: 1;
+}
+
+.azione-info h4,
+.rischio-info h4 {
+  color: #1e3a8a;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.azione-info ul,
+.rischio-info ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.azione-info ul li,
+.rischio-info ul li {
+  margin-bottom: 5px;
+}
+
+/* Sezioni progetti e casi studio */
+.progetti-container,
+.casi-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.progetto,
+.caso {
+  flex: 1 1 calc(50% - 15px);
+  min-width: 300px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.progetto h3,
+.caso h3 {
+  color: white;
+  background-color: #1e3a8a;
+  padding: 8px;
+  border-radius: 5px;
+  border-bottom: 2px solid #dbeafe;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.progetto ul,
+.caso ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.progetto ul li,
+.caso ul li {
+  margin-bottom: 8px;
+}
+
+/* Innovazione e prevenzione */
+.innovazione-container,
+.prevenzione-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 20px 0 30px;
+}
+
+.innovazione-area,
+.misura {
+  flex: 1 1 calc(50% - 15px);
+  min-width: 300px;
+  background-color: #dbeafe;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.innovazione-area h3,
+.misura h3 {
+  color: white;
+  background-color: #1e3a8a;
+  padding: 8px;
+  border-radius: 5px;
+  border-bottom: 2px solid #93c5fd;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.innovazione-area ul,
+.misura ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+.misura ul li {
+  margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to right, #1e3a8a, #3b82f6);
+  color: white;
+  padding: 30px 0 20px;
+  border-radius: 20px 20px 0 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.footer-section {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  color: white;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #dbeafe;
+  padding-bottom: 5px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: #dbeafe;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #dbeafe;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .azione-card,
+  .rischio-card,
+  .progetto,
+  .caso,
+  .innovazione-area,
+  .misura {
+    flex: 1 1 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    padding: 10px 0;
+  }
+}
+
+/* Tutti i bottoni con contorno blu */
+button, #progetto .container {
+  outline: 3px solid #1e3a8a;
+  outline-offset: 2px;
+}
